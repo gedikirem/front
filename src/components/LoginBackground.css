@@ -1,0 +1,73 @@
+/* Sayfa tam ekran arka plan */
+.loginBackground {
+  background: linear-gradient(to top right, #22282A, #22282A, #434E54, #748790);
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Arka plan resmi */
+.background-imageL {
+  position: fixed;
+  top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ortalamak için */
+  max-width: 100%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Dış çember (gradient kenarlık efekti için) */
+.outer-circle {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
+}
+
+/* İç çember (içerik alanı için) */
+.inner-circle {
+  width: 100%;
+  height: 100%;
+  background: rgba(71, 85, 90, 0.32);
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Çemberin içindeki kare alan (içerik kutusu) */
+.content-box {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  padding: 20px;
+  z-index: 2;
+}
+
+/* Üstte kalan sabit resim */
+.overlay-imageL {
+  position: fixed;
+  top: 50%;
+    left: 50%;
+    transform: translate(-130%, 0%); /* Sol alt köşeye doğru kaydırıyoruz */
+  max-width: 100%;
+  height: auto;
+  z-index: 3;
+  pointer-events: none;
+}

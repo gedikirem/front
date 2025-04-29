@@ -1,0 +1,62 @@
+/* Sayfa tam ekran arka plan */
+.background {
+    background-color: #22282a;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: auto;
+}
+
+/* png1 sabit arka plan resmi */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Sayfanın içerdiği ekran alanı */
+.main-container {
+    margin: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Gradient border container */
+.gradient-border {
+    position: fixed; /* Sabit kalması için */
+    top: 40px;
+    bottom: 40px;
+    left: 40px;
+    right: 40px;
+
+    background: rgba(71, 85, 90, 0.32);
+    border: 3px solid transparent;
+    border-image: linear-gradient(to top right, #22282a, #68909d);
+    border-image-slice: 1;
+
+    border-radius: 12px;
+    padding: 1px;
+
+    backdrop-filter: blur(10px); /* Bu alanın altında kalan kısımların bulanık görünmesi için */
+    -webkit-backdrop-filter: blur(10px); /* Safari için destek */
+
+    z-index: 2;
+    overflow: auto; /* İçeriği scroll edebilmek için */
+}
+
+
+/* png2 sabit üstte kalan resim */
+.overlay-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 3;
+    pointer-events: none;
+}

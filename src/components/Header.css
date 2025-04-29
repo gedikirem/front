@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    margin-bottom:20px;
+    background: transparent;
+    font-family: 'Iceberg', sans-serif;
+    position: relative;
+    box-sizing: border-box;  /* İçeriğin sayfa dışına taşmaması için */
+    z-index: 10; /*ileride revize edebilirim*/
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+    right: 30px;
+    height: 1px;
+    background-color: white;
+    opacity: 0.6;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.site-name {
+    font-size: 48px;
+    color: white;
+    margin-right: 30px;
+    white-space: nowrap;
+}
+
+.location-selector {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+}
+
+.location-labels {
+    display: flex;
+    flex-direction: column;
+    margin-right: 8px;
+}
+
+.konum {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s;
+}
+
+.sehir {
+    font-size: 20px;
+    color: white;
+    transition: color 0.3s;
+}
+
+.location-selector:hover .konum,
+.location-selector:hover .sehir {
+    color: #271405;
+}
+
+.map-icon {
+    width: 45px;
+    height: 45px;
+    margin-right: 30px;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    background: rgba(86, 138, 139, 0.95);
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #222;
+}
+
+.dropdown-item:hover {
+    background-color: #eee;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: #271405;
+}
+
+.header-right {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-input {
+    padding: 8px 12px;
+    border-radius: 50px;
+    border: none;
+    background: #5A6569;
+    font-size: 20px;
+    outline: none;
+}
+
+.profile-icon {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
